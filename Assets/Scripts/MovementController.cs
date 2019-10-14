@@ -33,5 +33,7 @@ public class MovementController : MonoBehaviour
         float upOrDownInput = CrossPlatformInputManager.GetAxis("Vertical");
         Vector2 movementVelocity = new Vector2(leftOrRightInput * moveSpeed, upOrDownInput * moveSpeed);
         rigidbody.velocity = movementVelocity;
+
+
     }
 }
