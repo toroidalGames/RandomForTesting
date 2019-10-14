@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets;
+using UnityStandardAssets.CrossPlatformInput;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
