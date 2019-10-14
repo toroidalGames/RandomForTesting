@@ -8,8 +8,13 @@ using UnityStandardAssets.CrossPlatformInput;
 public class MovementController : MonoBehaviour
 {
     [SerializeField]float moveSpeed = 3f;
-    
-    
+
+    Rigidbody2D rigidbody;
+    private void Awake()
+    {
+        rigidbody = GetComponent<Rigidbody2D>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +24,14 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
+    }
+
+    private void Move()
+    {
+        float leftOrRightInput = CrossPlatformInputManager.GetAxis("Horizontal");
+        float upOrDownInput = CrossPlatformInputManager.GetAxis("Vertical");
+        Vector2 movementVelocity = new Vector2(leftOrRightInput * moveSpeed, upOrDownInput * moveSpeed);
+        rigidbody.velocity = movementVelocity;
     }
 }
