@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: moving
+    m_ConditionEvent: movingHorizontally
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3015015227709826785}
@@ -80,7 +80,7 @@ AnimatorController:
   m_Name: PeonAnimationController
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: moving
+  - m_Name: movingHorizontally
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -135,7 +135,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: moving
+    m_ConditionEvent: movingHorizontally
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4101387086960416956}
