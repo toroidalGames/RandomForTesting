@@ -10,9 +10,11 @@ public class Absorber : MonoBehaviour
 
     Controllable controllableTarget = null;
     SpriteRenderer spriteRenderer;
+    Animator animator;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -38,6 +40,7 @@ public class Absorber : MonoBehaviour
         {
             controllableTarget.BeTakenOver(takeOverPower);
             spriteRenderer.sprite = controllableTarget.GameObjectThatWillBeAbsorbed().GetComponentInChildren<SpriteRenderer>().sprite;
+            animator.runtimeAnimatorController = controllableTarget.GameObjectThatWillBeAbsorbed().GetComponent<Animator>().runtimeAnimatorController;
         }
     }
 }
