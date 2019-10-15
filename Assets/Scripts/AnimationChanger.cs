@@ -36,6 +36,7 @@ public class AnimationChanger : MonoBehaviour
         if (playerHasHorizontalSpeed)
         {
             animator.SetBool("movingHorizontally", true);
+            transform.localScale = new Vector2(Mathf.Sign(rigidBody.velocity.x), 1f);
         }
         else
         {
