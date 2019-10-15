@@ -9,7 +9,12 @@ public class Absorber : MonoBehaviour
     [SerializeField] bool takeOverMode = false;
 
     Controllable controllableTarget = null;
+    SpriteRenderer spriteRenderer;
 
+    private void Awake()
+    {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
 
     void Update()
     {
@@ -32,6 +37,7 @@ public class Absorber : MonoBehaviour
         if (controllableTarget.CanBeTakenOver())
         {
             controllableTarget.BeTakenOver(takeOverPower);
+            spriteRenderer.sprite = controllableTarget.GameObjectThatWillBeAbsorbed().GetComponentInChildren<SpriteRenderer>().sprite;
         }
     }
 }

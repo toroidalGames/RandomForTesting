@@ -7,7 +7,8 @@ public class Controllable : MonoBehaviour
 {
     [SerializeField] bool canBeTakenOver = true;
     [SerializeField] int requiredTakeOverPower = 10;
-    [SerializeField] GameObject OrcThatWillBeAbsorbed = null;
+    [SerializeField] GameObject gameObjectThatWillBeAbsorbed = null;
+    
 
     public bool CanBeTakenOver()
     {
@@ -19,7 +20,12 @@ public class Controllable : MonoBehaviour
         if (takeOverPower > requiredTakeOverPower)
         {
             Debug.Log("You have enough power to take over: " + GetComponent<Character>().name);
+
         }
     }
     
+    public GameObject GameObjectThatWillBeAbsorbed()
+    {
+        return gameObjectThatWillBeAbsorbed;
+    }
 }

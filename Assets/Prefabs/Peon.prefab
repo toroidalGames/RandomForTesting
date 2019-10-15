@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeTakenOver: 1
   requiredTakeOverPower: 10
-  OrcThatWillBeAbsorbed: {fileID: 0}
+  gameObjectThatWillBeAbsorbed: {fileID: 1033235784495705064}
 --- !u!1 &1033235784817305118
 GameObject:
   m_ObjectHideFlags: 0
