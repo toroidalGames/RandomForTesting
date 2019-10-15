@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1033235784495705067}
+  - component: {fileID: 2157803739560524891}
   - component: {fileID: 1033235784495705069}
   - component: {fileID: 1033235784495705068}
   - component: {fileID: 8991623060485467582}
@@ -38,6 +39,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2157803739560524891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033235784495705064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7804ed98a48968439fbe930415e3dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
 --- !u!50 &1033235784495705069
 Rigidbody2D:
   serializedVersion: 4
@@ -120,7 +134,7 @@ MonoBehaviour:
   attackDamage: 5
   strength: 5
   dexterity: 5
-  charismas: 5
+  charisma: 1
   intelligence: 5
   constitution: 5
 --- !u!114 &1035641863407020261

@@ -8,6 +8,7 @@ public class Absorber : MonoBehaviour
 {
     [SerializeField] int takeOverPower = 15;
     [SerializeField] bool takeOverMode = false;
+    [SerializeField] float absorbRange = 1f;
 
     Controllable controllableTarget = null;
     SpriteRenderer spriteRenderer;
@@ -21,11 +22,20 @@ public class Absorber : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("space") && controllableTarget != null)
+        if (AbsorbModeWithTargetInRange())
         {
             TakeOverCharacter();
         }
+
     }
+
+    private bool AbsorbModeWithTargetInRange()
+    {
+        if (controllableTarget == null) { return false; }
+        float targetDistance = Vector2.Distance(transform.position, controllableTarget.transform.position);
+        return Input.GetKeyDown("space") && controllableTarget != null && targetDistance <= absorbRange;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Controllable collidedTarget = collision.gameObject.GetComponent<Controllable>();
