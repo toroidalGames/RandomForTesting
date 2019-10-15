@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1033235784495705067}
   - component: {fileID: 1033235784495705069}
-  - component: {fileID: 1033235784495705066}
   - component: {fileID: 1033235784495705068}
   - component: {fileID: 8991623060485467582}
+  - component: {fileID: 1035641863407020261}
+  - component: {fileID: 2136692695761322377}
   m_Layer: 0
   m_Name: Peon
   m_TagString: Untagged
@@ -56,19 +57,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1033235784495705066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033235784495705064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7804ed98a48968439fbe930415e3dbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
 --- !u!61 &1033235784495705068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79,7 +67,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -114,6 +102,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1035641863407020261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033235784495705064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76794e45454a82e40a2d9d0aecc8c648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: name is peon
+  hp: 100
+  attackDamage: 1
+--- !u!114 &2136692695761322377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033235784495705064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248e1611ea12494799b774ec7fc543e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeTakenOver: 1
+  requiredTakeOverPower: 10
 --- !u!1 &1033235784817305118
 GameObject:
   m_ObjectHideFlags: 0
