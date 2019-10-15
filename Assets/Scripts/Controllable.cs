@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Character))]
+[RequireComponent(typeof(Stats))]
 public class Controllable : MonoBehaviour
 {
     [SerializeField] bool canBeTakenOver = true;
@@ -10,18 +11,9 @@ public class Controllable : MonoBehaviour
     [SerializeField] GameObject gameObjectThatWillBeAbsorbed = null;
     
 
-    public bool CanBeTakenOver()
+    public bool CanBeTakenOver(int takeOverPower)
     {
-        return canBeTakenOver;
-    }
-
-    public void BeTakenOver(int takeOverPower)
-    {
-        if (takeOverPower > requiredTakeOverPower)
-        {
-            Debug.Log("You have enough power to take over: " + GetComponent<Character>().name);
-
-        }
+        return canBeTakenOver && takeOverPower > requiredTakeOverPower;
     }
     
     public GameObject GameObjectThatWillBeAbsorbed()

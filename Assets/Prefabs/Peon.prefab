@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1033235784495705069}
   - component: {fileID: 1033235784495705068}
   - component: {fileID: 8991623060485467582}
+  - component: {fileID: 2030560739405067332}
   - component: {fileID: 1035641863407020261}
   - component: {fileID: 2136692695761322377}
   - component: {fileID: 9137255396442950236}
@@ -103,6 +104,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2030560739405067332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033235784495705064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8212ebfbe0316574fa38f3421e869d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 250
+  attackDamage: 5
+  strength: 5
+  dexterity: 5
+  charismas: 5
+  intelligence: 5
+  constitution: 5
 --- !u!114 &1035641863407020261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,8 +136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: name is peon
-  hp: 100
-  attackDamage: 1
 --- !u!114 &2136692695761322377
 MonoBehaviour:
   m_ObjectHideFlags: 0

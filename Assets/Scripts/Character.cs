@@ -6,8 +6,7 @@ public class Character : MonoBehaviour
 {
 
     [SerializeField] string name;
-    [SerializeField] float hp = 100f;
-    [SerializeField] float attackDamage = 1f;
+
 
 
 

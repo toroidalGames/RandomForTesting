@@ -92,8 +92,9 @@ GameObject:
   - component: {fileID: 8497191343779164943}
   - component: {fileID: 3249377958506825544}
   - component: {fileID: 8979102139831683006}
-  - component: {fileID: 1702553131515503163}
   - component: {fileID: 8002564031566113499}
+  - component: {fileID: 792317172838831223}
+  - component: {fileID: 1018604818580662007}
   - component: {fileID: 4811376878417241982}
   - component: {fileID: 6019293316588180950}
   - component: {fileID: 769812376594800807}
@@ -153,20 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
---- !u!114 &1702553131515503163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3481146245724605438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6899057babd79429823f44dd54099e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  takeOverPower: 15
-  takeOverMode: 0
 --- !u!114 &8002564031566113499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,8 +167,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
+--- !u!114 &792317172838831223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481146245724605438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6899057babd79429823f44dd54099e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takeOverPower: 15
+  takeOverMode: 0
+--- !u!114 &1018604818580662007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481146245724605438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8212ebfbe0316574fa38f3421e869d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   hp: 100
   attackDamage: 1
+  strength: 1
+  dexterity: 1
+  charismas: 1
+  intelligence: 1
+  constitution: 1
 --- !u!61 &4811376878417241982
 BoxCollider2D:
   m_ObjectHideFlags: 0

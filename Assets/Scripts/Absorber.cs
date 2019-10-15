@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Stats))]
 public class Absorber : MonoBehaviour
 {
     [SerializeField] int takeOverPower = 15;
@@ -36,11 +37,25 @@ public class Absorber : MonoBehaviour
 
     private void TakeOverCharacter()
     {
-        if (controllableTarget.CanBeTakenOver())
+        if (controllableTarget.CanBeTakenOver(takeOverPower))
         {
-            controllableTarget.BeTakenOver(takeOverPower);
-            spriteRenderer.sprite = controllableTarget.GameObjectThatWillBeAbsorbed().GetComponentInChildren<SpriteRenderer>().sprite;
-            animator.runtimeAnimatorController = controllableTarget.GameObjectThatWillBeAbsorbed().GetComponent<Animator>().runtimeAnimatorController;
+            AbsorbTargetsSpriteAndAnimator();
+            AbsorbStats();
+        }
+    }
+
+    private void AbsorbTargetsSpriteAndAnimator()
+    {
+        spriteRenderer.sprite = controllableTarget.GameObjectThatWillBeAbsorbed().GetComponentInChildren<SpriteRenderer>().sprite;
+        animator.runtimeAnimatorController = controllableTarget.GameObjectThatWillBeAbsorbed().GetComponent<Animator>().runtimeAnimatorController;
+    }
+
+    private void AbsorbStats()
+    {
+        Stats targetsStats = controllableTarget.GetComponent<Stats>();
+        if (targetsStats != null)
+        {
+            GetComponent<Stats>().ChangeStatsToTargets(targetsStats);
         }
     }
 }
