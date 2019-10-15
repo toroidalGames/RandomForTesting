@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8991623060485467582}
   - component: {fileID: 1035641863407020261}
   - component: {fileID: 2136692695761322377}
+  - component: {fileID: 9137255396442950236}
   m_Layer: 0
   m_Name: Peon
   m_TagString: Untagged
@@ -129,8 +130,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3248e1611ea12494799b774ec7fc543e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9137255396442950236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033235784495705064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d95899f5ba7d46a4e2c55c5b18f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   canBeTakenOver: 1
   requiredTakeOverPower: 10
+  OrcThatWillBeAbsorbed: {fileID: 0}
 --- !u!1 &1033235784817305118
 GameObject:
   m_ObjectHideFlags: 0

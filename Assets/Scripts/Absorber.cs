@@ -8,7 +8,7 @@ public class Absorber : MonoBehaviour
     [SerializeField] int takeOverPower = 15;
     [SerializeField] bool takeOverMode = false;
 
-    IControllable controllableTarget = null;
+    Controllable controllableTarget = null;
 
 
     void Update()
@@ -20,7 +20,7 @@ public class Absorber : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IControllable collidedTarget = collision.gameObject.GetComponent<IControllable>();
+        Controllable collidedTarget = collision.gameObject.GetComponent<Controllable>();
         if (collidedTarget != null)
         {
             controllableTarget = collidedTarget;
@@ -29,6 +29,9 @@ public class Absorber : MonoBehaviour
 
     private void TakeOverCharacter()
     {
-        controllableTarget.TakeOver(takeOverPower);
+        if (controllableTarget.CanBeTakenOver())
+        {
+            controllableTarget.BeTakenOver(takeOverPower);
+        }
     }
 }
