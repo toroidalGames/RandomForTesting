@@ -24,16 +24,8 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+       
     }
 
-    private void Move()
-    {
-        float leftOrRightInput = CrossPlatformInputManager.GetAxis("Horizontal");
-        float upOrDownInput = CrossPlatformInputManager.GetAxis("Vertical");
-        Vector2 movementVelocity = new Vector2(leftOrRightInput * moveSpeed, upOrDownInput * moveSpeed);
-        rigidbody.velocity = movementVelocity;
-
-
-    }
+ 
 }

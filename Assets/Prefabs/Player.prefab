@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8497191343779164943}
   - component: {fileID: 3249377958506825544}
-  - component: {fileID: 8979102139831683006}
+  - component: {fileID: 2879386333792337462}
   - component: {fileID: 8002564031566113499}
   - component: {fileID: 792317172838831223}
   - component: {fileID: 1018604818580662007}
@@ -141,7 +141,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8979102139831683006
+--- !u!114 &2879386333792337462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3481146245724605438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7804ed98a48968439fbe930415e3dbc, type: 3}
+  m_Script: {fileID: 11500000, guid: dda0f7618e964bf499ed6281095ce1e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
@@ -197,7 +197,7 @@ MonoBehaviour:
   attackDamage: 1
   strength: 1
   dexterity: 1
-  charismas: 1
+  charisma: 1
   intelligence: 1
   constitution: 1
 --- !u!61 &4811376878417241982
